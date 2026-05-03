@@ -28,6 +28,10 @@ app.use('/stream', streamRouter);
 app.use('/history', historyRouter);
 app.use('/favorites', favoritesRouter);
 
+app.use('/',(req,res)=>{
+  res.status(404).send("Hello World");
+});
+
 async function main() {
   await connectDb();
   app.listen(PORT, () => {
