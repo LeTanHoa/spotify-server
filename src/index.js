@@ -28,7 +28,7 @@ app.use('/stream', streamRouter);
 app.use('/history', historyRouter);
 app.use('/favorites', favoritesRouter);
 
-app.use('/',(req,res)=>{
+app.use('/intro',(req,res)=>{
   res.status(404).send("Hello World");
 });
 
